@@ -1,0 +1,21 @@
+.screen-out {
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.scroll-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap; //영역을 벗어났을때 뚫고 나가겠다
+    -webkit-overflow-scrolling: touch; //mobile작동시 가속도가 붙은 스크롤링이 가능
+    -ms-overflow-style: none; // 스크롤바 감추기
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+}

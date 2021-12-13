@@ -1,0 +1,10 @@
+// font
+$font-default: -apple-system, BlinkMacSystemFont, helvetica, Apple SD Gothic Neo, sans-serif;
+
+// size
+$m-padding: 18px;
+//header, tab에 정확한 값을 주는 이유: 헤더부분을 fixed로 고정시켜 놓았기 때문에 아래에 올 container 공간의 값(여백 확보)을 정확히 계산하기 위해
+$place-header-height: 48px;
+$place-tab-height: 46px;
+
+$header-height: $place-header-height + $place-tab-height;

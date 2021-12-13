@@ -1,0 +1,59 @@
+.dimmed-layer {
+    position: fixed;
+    // 상하좌우 꽉차게 설정
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(#000, 0.8);
+    z-index: 9999;
+}
+.order-type-popup { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 32px 0 40px;
+    border-radius: 16px 16px 0 0;
+    z-index: 10000;
+    text-align: center;
+
+    .title {
+        font-size: 20px;
+        font-weight: 700;
+        color: $booking-color-text1;
+    }
+    .type-list {
+        display: flex;
+        margin-top: 32px;//보통 4의배수
+    }
+    .type-item {
+        flex: 1;//부모요소에서 플렉스를 줬을때 그 안에 있는 요소가 2일 경우에는 1대 1로 요소가 균등 분할 된다.
+        & + .type-item {
+            border-left: 1px solid $booking-color-border103;
+        }//item이 추가될때마다 테두리가 추가된다.
+    }
+    .icon {
+        width: 100px;
+        height: auto; //width에 맞게 높이가 자동 조정된다 
+        color: $booking-color-bg118;
+    }
+    .desc {
+        margin-top: 8px;
+        font-size: 15px;
+        line-height: 1.5;
+        font-weight: 600;
+        color: $booking-color-text1;
+    }
+    .btn-selection {
+        display: inline-block;
+        margin-top: 10px; // inline요소 -> inline block적용시 먹힘
+        padding: 6px 18px;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 28px;
+        background-color: $booking-color-bg189;
+        color: #fff;
+    }
+}

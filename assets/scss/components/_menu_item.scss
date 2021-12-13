@@ -1,0 +1,57 @@
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 18px;
+    margin: 0 -1*$m-padding; //margin에 음수값을 줘서 부모영역에 있던 여백을 제거할수있다
+    &:not(:last-child) {
+        border-bottom: 1px solid $booking-color-border144;
+    }
+
+    .menu-detail {
+        display: flex;
+        align-items: center;
+        flex: 1;
+    }
+
+    .menu-img-area {
+        position: relative;
+        flex-shrink: 0;
+        margin-right: 12px;
+        border-radius: 5px;
+        overflow: hidden;//radius에서 빠져나오는 부분을 hidden처리
+
+        &:not(.no-img)::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.06);
+        }
+        
+        .menu-img {
+            display: block;//임의 여백이 생기는 부분을 제거
+        }
+    }
+}
+/*공통으로 사용할 것 같은 부분은 따로 빼놓는다.*/
+.menu-name-group {
+    display: flex;
+    align-items: center;
+
+    .menu-name {
+        font-size: 17px;
+        line-height: 22px;
+        font-weight: 700;
+        color: $booking-color-text6;
+    }
+
+    .ico-new {
+        margin-left: 4px;
+    }
+
+    .badge-popular {
+        margin-left: 6px;
+    }
+}
