@@ -3,3 +3,13 @@
     white-space: nowrap; //밴딩되지 않도록 쭉 오른쪽으로 이어지게
     overflow: hidden; //하지만 영역이 넘어가는 건 ...으로 처리
 }
+
+@mixin multi-ellipsis($font-size, $line-height, $lines) {
+    font-size: $font-size;
+    line-height: $line-height;
+    max-height: $line-height * $lines;
+    overflow: hidden;//...은 인터넷 익스플로러에서는 되지 않으므로 2줄이 넘어가면 자동으로 히든처리가 되도록 만들어 놓는다
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical; /* autoprefixer: off */
+}
