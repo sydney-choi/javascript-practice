@@ -1,4 +1,4 @@
-@mixin ellipse {
+@mixin ellipsis {
     text-overflow: ellipsis;
     white-space: nowrap; //밴딩되지 않도록 쭉 오른쪽으로 이어지게
     overflow: hidden; //하지만 영역이 넘어가는 건 ...으로 처리

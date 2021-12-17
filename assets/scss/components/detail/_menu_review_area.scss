@@ -1,0 +1,53 @@
+.menu-review-area {
+    .orderer-img-area {
+        padding-bottom: 22px;
+        background-color: #fff;
+        .title {
+            padding: 6px $m-padding 12px;
+        }
+    }
+
+    .title {
+        line-height: 22px;
+        font-size: 17px;
+        font-weight: 700;
+        letter-spacing: -0.3px;
+        color: $booking-color-text6;
+        .num {
+            margin-left: 6px;
+            color: $green;
+        }
+    }
+
+    .orderer-pic-list {
+        display: flex;
+    }
+    .orderer-pic-item {
+        display: flex;
+        & + .orderer-pic-item { //item들이 연달아 올 때는 간격을 띄워준다
+            margin-left: 1px;
+        }
+
+        &:first-child::before,
+        &:last-child::after {
+            content: '';
+            display: block;
+            width: $m-padding;
+            height: 100%;
+        }
+    }
+
+    .orderer-pic-link {
+        position: relative;
+        display: flex;//a 태그가 인라인 요소이기 때문에 영역 확보를 위해
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0; // 가로 세로 꽉 채워진 영역
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+    }
+}

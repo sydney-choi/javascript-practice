@@ -1,0 +1,68 @@
+.amount-select {
+    display: flex;
+    align-items: center;
+    height: 35px;
+    .btn-minus,
+    .btn-plus {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        border: 1px solid $booking-color-border109;
+        background-color: $booking-color-bg3;
+        color: $booking-color-text106;
+        &.enabled {
+            border-color: #00d870;
+            background-color: #00d780;
+            color: #fff;
+        }
+        &:disabled { //상태를 나타내는 경우 :를 붙임
+            color: $booking-color-border102;
+        }
+        &::before {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 1px;
+            background-color: currentColor;//부모컬러를 받아온다.
+
+        }
+    }
+
+    .btn-minus {
+        border-radius: 3px 0 0 3px; //왼쪽 모서리 깎기
+    }
+
+    .btn-plus {
+        border-radius: 0 3px 3px 0; // 오른쪽 모서리 깎기
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 1px;
+            height: 13px;
+            background-color: currentColor;
+            transform: translate(-50%, -50%); //top left로 퍼센트 조정을 했을 때는 꼭 transform으로 자기 자신의 부피도 계산해서 조정해야한다.
+        }
+    }
+
+    .amount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 35px;
+        border-top: 1px solid $booking-color-border109;
+        border-bottom: 1px solid $booking-color-border109;
+        font-weight: 700;
+        color: $booking-color-text104;
+        &.disabled {
+            font-weight: 400;
+            color:#c9c9c9
+        }
+    }
+}
