@@ -1227,6 +1227,42 @@ textarea::-webkit-outer-spin-button {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
+.menu-review-area .orderer-review-area {
+  margin-top: 12px;
+  background-color: #fff;
+}
+
+.menu-review-area .orderer-review-area .title {
+  padding: 16px 18px;
+}
+
+.menu-review-area .review-list {
+  border-top: 1px solid #f2f4f6;
+}
+
+.menu-review-area .review-item {
+  padding: 16px 18px;
+  border-bottom: 1px solid #f2f4f6;
+}
+
+.menu-review-area .review-star {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #242424;
+}
+
+.menu-review-area .ico-star-group {
+  position: relative;
+  margin-right: 6px;
+  display: inline-block;
+  width: 77px;
+  height: 13px;
+  background: url("../images/ico-star-group.svg") no-repeat center left;
+}
+
 .container {
   padding-top: 94px;
   padding-bottom: 70px;

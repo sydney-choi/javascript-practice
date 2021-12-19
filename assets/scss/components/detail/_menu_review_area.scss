@@ -1,4 +1,5 @@
 .menu-review-area {
+    // 주문자 사진
     .orderer-img-area {
         padding-bottom: 22px;
         background-color: #fff;
@@ -6,7 +7,7 @@
             padding: 6px $m-padding 12px;
         }
     }
-
+    // 공통
     .title {
         line-height: 22px;
         font-size: 17px;
@@ -27,7 +28,7 @@
         & + .orderer-pic-item { //item들이 연달아 올 때는 간격을 띄워준다
             margin-left: 1px;
         }
-
+        //스크롤을 움직일때는 꽉 차보이게, 양쪽 끝으로 옮겼을때는 흰 부분이 나올수 있도록 함
         &:first-child::before,
         &:last-child::after {
             content: '';
@@ -49,5 +50,41 @@
             left: 0;
             background-color: rgba(0, 0, 0, 0.05);
         }
+    }
+
+    // 주문자 리뷰
+    .orderer-review-area {
+        margin-top: 12px;
+        background-color: #fff;
+        .title {
+            padding: 16px $m-padding;
+        }
+    }
+
+    .review-list {
+        border-top: 1px solid $booking-color-border4;
+    }
+
+    .review-item {
+        padding: 16px $m-padding;
+        border-bottom: 1px solid $booking-color-border4;
+    }
+    
+    .review-star {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 600;
+        color: $booking-color-text2;
+    }
+
+    .ico-star-group {
+        position: relative;
+        margin-right: 6px;
+        display: inline-block;
+        width: 77px;
+        height: 13px;
+        background: url("../images/ico-star-group.svg") no-repeat center left;
     }
 }
