@@ -1,0 +1,51 @@
+.option-popup-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5000;
+
+    .menu-option-popup {
+        position: fixed;
+        bottom: 0; //기준점이 아래
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: calc(100% - 45px); //버튼 있는곳 위
+        background-color: $booking-color-border151;
+        z-index: 10000;
+
+    }
+
+    .content-top-pattern {
+        position: absolute;
+        top: -11px;
+        width: 100%;
+        height: 11px;
+        fill: white;
+    }
+
+    .content-top {
+        height: 100px;
+        border-bottom: 1px solid $booking-color-border122;
+        background-color: #fff;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.08);// 쉐도우가 보이지 않으면 오버플로우나 z-index가 어떻게 설정되어 있는지 봐야 한다.
+        z-index: 1;
+    }
+
+    .content-body {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        background-color: #fff;
+        height: 500px;
+        div {
+            background-color: red;
+        }
+    }
+
+    .content-bottom {
+        padding: 0 10px 10px;
+    }
+}

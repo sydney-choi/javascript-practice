@@ -9,6 +9,20 @@
     max-width: 720px; //720까지 커지고 더 이상 커지지 않는다
 }
 
+.dimmed-layer {
+    position: fixed;
+    // 상하좌우 꽉차게 설정
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(#000, 0.8);
+    z-index: 9999;
+    &.light {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
 .badge-popular {
     display: inline-block;
     padding: 0 5px;
