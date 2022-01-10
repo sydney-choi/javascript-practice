@@ -119,7 +119,8 @@
             .badge {
                 margin-right: 8px;
                 padding: 0 4px;
-                border-radius: $booking-color-bg194;
+                border-radius: 3px;
+                background-color: $booking-color-bg194;
                 font-size: 13px;
                 line-height: 17px;
                 color: #fff;
@@ -145,6 +146,32 @@
             align-items: center;
             &:not(:first-child) {
                 margin-top: 14px;
+            }
+
+            .label {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                font-size: 17px;
+                .label-text {
+                    padding-right: 8px;
+                }
+                .label-icon {
+                    display: inline-flex;
+                    flex-shrink: 0;
+                    width: 28px;
+                    height: 28px;
+                    border: 1px solid $booking-color-border101;
+                    background-color: #fff;
+                }
+            }
+
+            .input-radio,
+            .input-check {
+                &:checked +.label {
+                    font-weight: 700;
+                }
             }
         }
     }
